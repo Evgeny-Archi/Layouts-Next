@@ -47,7 +47,6 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          'style-loader',
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
@@ -64,14 +63,6 @@ module.exports = {
           'sass-loader',
         ],
       },
-      // {
-      //   test: /\.(png|jpg|svg|gif)$/,
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: '[name].[ext]',
-      //     outputPath: 'img',
-      //   },
-      // },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/inline',
@@ -91,7 +82,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/img', to: 'img' },
+        { from: path.resolve(__dirname, 'src/img'), to: 'img' },
         { from: 'src/fonts', to: 'fonts' },
       ],
     }),
