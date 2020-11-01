@@ -3,3 +3,48 @@
     padding-top: 0;
   }
 }
+
+@media screen and (max-width: 1440px) {
+  .header {
+    &-top {
+      min-height: 140px;
+
+      &__title {
+        display: none;
+      }
+    }
+  }
+  .hero {
+    &__title h1 {
+      font-size: 12em;
+      max-width: 200px;
+      line-height: 160px;
+    }
+
+    &__worth-bg {
+      font-size: 12em;
+    }
+    &__text-title {
+      margin-bottom: 0;
+      &:after {
+        left: 80%;
+      }
+    }
+    &__text-about {
+      padding-left: 20px;
+    }
+    &__text-btn {
+      margin-top: 30px;
+    }
+  }
+
+  .services-wrap {
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+    &__item {
+      width: 45%;
+      margin-top: 40px;
+    }
+  }
+}
